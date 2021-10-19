@@ -2,9 +2,11 @@ package com.ztmp.helpers;
 
 import com.ztmp.enums.Role;
 import com.ztmp.model.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @Repository
 public class UserHelper {
@@ -27,4 +29,13 @@ public class UserHelper {
     public void setUsers(HashMap<String, User> users) {
         this.users = users;
     }
+
+    public User getUser(String login) {
+        for (Map.Entry<String, com.ztmp.model.User> userU : this.users.entrySet()) {
+            if (userU.getKey().equals(login))
+                return userU.getValue();
+        }
+        return null;
+    }
+
 }

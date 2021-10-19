@@ -2,6 +2,7 @@ package com.ztmp.service;
 
 import com.ztmp.enums.Role;
 import com.ztmp.helpers.UserHelper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class UserService {
 
     private static HashMap<String, com.ztmp.model.User> users;
@@ -24,8 +26,9 @@ public class UserService {
 
     public static UserDetails getUser(String login) {
         for (Map.Entry<String, com.ztmp.model.User> userU : users.entrySet()) {
-            if (userU.getKey().equals(login))
+            if (userU.getKey().equals(login)){
                 return getByRoles(userU.getValue());
+            }
         }
         return null;
     }

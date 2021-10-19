@@ -20,6 +20,8 @@ public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
     public void commence(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AuthenticationException e) throws ServletException, IOException {
         Gson gson = new Gson();
+        log.error("Error - Unauthorised user {}", e);
+        log.error(e.getMessage());
         gson.toJson(new Response(401, "Unauthorised"), httpServletResponse.getWriter());
     }
 }

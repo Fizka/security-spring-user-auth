@@ -1,0 +1,16 @@
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\configuration\WebSecurityConfigurerAdapterImpl.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\ApplicationStarter.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\service\UserDetailsServiceImpl.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\exception\RestControllerExceptionHandler.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\model\User.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\exception\RestAuthenticationEntryPoint.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\service\DashboardService.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\service\UserService.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\controller\DashboardController.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\helpers\UserHelper.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\authGuard\UserDetailsImpl.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\exception\RestAccessDeniedHandler.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\enums\Role.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\model\Response.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\model\Book.java
+C:\Java\Project\University\ZTP\Projekt_Spring\src\main\java\com\ztmp\helpers\BookHelper.java

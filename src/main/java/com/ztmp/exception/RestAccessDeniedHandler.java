@@ -19,6 +19,7 @@ public class RestAccessDeniedHandler implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws ServletException, IOException {
         Gson gson = new Gson();
+        log.error("Error - Access Denied for this user {}", e);
         gson.toJson(new Response(403, "Access Denied"), httpServletResponse.getWriter());
     }
 }

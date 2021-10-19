@@ -1,0 +1,16 @@
+com\ztmp\exception\RestControllerExceptionHandler.class
+com\ztmp\service\DashboardService.class
+com\ztmp\ApplicationStarter.class
+com\ztmp\helpers\UserHelper.class
+com\ztmp\model\User.class
+com\ztmp\exception\RestAccessDeniedHandler.class
+com\ztmp\model\Book.class
+com\ztmp\configuration\WebSecurityConfigurerAdapterImpl.class
+com\ztmp\service\UserService.class
+com\ztmp\exception\RestAuthenticationEntryPoint.class
+com\ztmp\helpers\BookHelper.class
+com\ztmp\service\UserDetailsServiceImpl.class
+com\ztmp\authGuard\UserDetailsImpl.class
+com\ztmp\controller\DashboardController.class
+com\ztmp\enums\Role.class
+com\ztmp\model\Response.class

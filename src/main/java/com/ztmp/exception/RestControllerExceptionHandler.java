@@ -39,14 +39,15 @@ public class RestControllerExceptionHandler extends ResponseEntityExceptionHandl
     @ExceptionHandler(value = {Exception.class})
     @ResponseBody
     public ResponseEntity<Object> handleError(Exception e, HttpServletRequest request) {
-        log.error("Error - something went wrong!");
-        return new ResponseEntity<>(new Response(400, "Something went wrong..."), new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        log.error("Error - something went wrong! " + e.getMessage());
+        return new ResponseEntity<>(new Response(400, "Error - Something went wrong..."), new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 
     @Override
     @ResponseBody
     protected ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex, HttpHeaders headers,
                                                                           HttpStatus status, WebRequest request) {
+        log.error("Exception: " + ex.getMessage());
         return new ResponseEntity<>(new Response(400, ex.getParameterName() + " parameter is missing"), new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 
@@ -54,6 +55,7 @@ public class RestControllerExceptionHandler extends ResponseEntityExceptionHandl
     @ResponseBody
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                   HttpHeaders headers, HttpStatus status, WebRequest request) {
+        log.error("Exception: " + ex.getMessage());
         List<String> errors = new ArrayList<>();
         for (FieldError error : ex.getBindingResult().getFieldErrors()) {
             errors.add(error.getField() + ": " + error.getDefaultMessage());
@@ -69,6 +71,7 @@ public class RestControllerExceptionHandler extends ResponseEntityExceptionHandl
     @ExceptionHandler(value = {NullPointerException.class})
     @ResponseBody
     public ResponseEntity<Object> handleNullPointerException(NullPointerException ex, WebRequest request) {
+        log.error("Exception: " + ex.getMessage());
         return new ResponseEntity<>(new Response(404, "Value is empty"), new HttpHeaders(), HttpStatus.NOT_FOUND);
     }
 
